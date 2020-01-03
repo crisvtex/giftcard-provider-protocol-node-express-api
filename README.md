@@ -28,8 +28,8 @@ An easy way to get started with a Express server offering a REST API with Node.j
 ### GET Routes
 
 * visit http://localhost:3000
-  * /messages
-  * /messages/1
+  * /giftcards
+  * /giftcards/1
   * /users
   * /users/1
 
@@ -37,19 +37,19 @@ An easy way to get started with a Express server offering a REST API with Node.j
 
 #### CURL
 
-* Create a message with:
-  * `curl -X POST -H "Content-Type:application/json" http://localhost:3000/messages -d '{"text":"Hi again, World"}'`
-* Delete a message with:
-  * `curl -X DELETE -H "Content-Type:application/json" http://localhost:3000/messages/1`
+* Create a giftcard with:
+  * `curl -X POST -H "Content-Type:application/json" http://localhost:3000/giftcards -d '{"text":"Hi again, World"}'`
+* Delete a giftcard with:
+  * `curl -X DELETE -H "Content-Type:application/json" http://localhost:3000/giftcards/1`
 
 #### Postman
 
 * Install [Postman](https://www.getpostman.com/apps) to interact with REST API
-* Create a message with:
-  * URL: http://localhost:3000/messages
+* Create a giftcard with:
+  * URL: http://localhost:3000/giftcards
   * Method: POST
   * Body: raw + JSON (application/json)
   * Body Content: `{ "text": "Hi again, World" }`
-* Delete a message with:
-  * URL: http://localhost:3000/messages/1
+* Delete a giftcard with:
+  * URL: http://localhost:3000/giftcards/1
   * Method: DELETE

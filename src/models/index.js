@@ -9,20 +9,20 @@ let users = {
   },
 };
 
-let messages = {
+let giftcards = {
   1: {
     id: '1',
-    text: 'Hello World',
+    text: 'Giftcard 1',
     userId: '1',
   },
   2: {
     id: '2',
-    text: 'By World',
+    text: 'Giftcard 2',
     userId: '2',
   },
 };
 
 export default {
   users,
-  messages,
+  giftcards,
 };

@@ -1,9 +1,9 @@
 import session from './session';
 import user from './user';
-import message from './message';
+import giftcard from './giftcard';
 
 export default {
   session,
   user,
-  message,
+  giftcard,
 };

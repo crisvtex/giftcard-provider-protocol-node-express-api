@@ -27,10 +27,10 @@ app.use((req, res, next) => {
 
 app.use('/session', routes.session);
 app.use('/users', routes.user);
-app.use('/messages', routes.message);
+app.use('/giftcards', routes.giftcard);
 
 // Start
 
 app.listen(process.env.PORT, () =>
-  console.log(`Example app listening on port ${process.env.PORT}!`),
+  console.log(`Servicio API Backend iniciado en puerto ${process.env.PORT}`),
 );
