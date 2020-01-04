@@ -52,7 +52,7 @@ router.post('/_search', (req, res) => {
 
 /*  API Endpoint: POST Create GiftCard Transaction
     https://documenter.getpostman.com/view/5517284/S17qU9oo?version=latest#73387688-c21b-4e42-8c8b-47e2aa6e0b28 */
-router.post('/:giftcardId/transaction', (req, res) => {
+router.post('/:giftcardId/transactions', (req, res) => {
   const transactions = req.context.models.transactions;
   
   /* Lógica de negocio... */

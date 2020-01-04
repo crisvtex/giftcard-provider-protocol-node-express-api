@@ -1,55 +1,46 @@
-# Simple Node with Express Server with REST API
-https://github.com/rwieruch/node-express-server-rest-api
+# Demo Integractión Giftcard Provider Protocol con Servidor Express y REST API
+Boilerplate: https://github.com/rwieruch/node-express-server-rest-api
 
-[![Build Status](https://travis-ci.org/rwieruch/node-express-server-rest-api.svg?branch=master)](https://travis-ci.org/rwieruch/node-express-server-rest-api) [![Slack](https://slack-the-road-to-learn-react.wieruch.com/badge.svg)](https://slack-the-road-to-learn-react.wieruch.com/) [![Greenkeeper badge](https://badges.greenkeeper.io/rwieruch/node-express-server-rest-api.svg)](https://greenkeeper.io/)
+Un ejemplo práctico de aplicación de backend para simular flujo de Giftcard VTEX como medio de pago de fidelidad.
 
-An easy way to get started with a Express server offering a REST API with Node.js. [Read more about it.](https://www.robinwieruch.de/node-express-server-rest-api)
+Documentación de referencia:
 
-## Features
+* https://help.vtex.com/tutorial/how-to-integrate-with-a-gift-card--tutorials_450
+* https://documenter.getpostman.com/view/18468/RVfqmDgC?version=latest
+* https://documenter.getpostman.com/view/5517284/S17qU9oo?version=latest
+* https://documenter.getpostman.com/view/18468/7TRdAJy?version=latest
+* https://documenter.getpostman.com/view/18468/vtex-giftcard-system-api/6YtyvrM?version=latest
+
+## Características
 
 * Babel 7
-* Environment Variables
+* Variables de Ambiente
 * Express
-* REST API
+* API REST
 
-## Requirements
+## Requerimientos
 
 * [node & npm](https://nodejs.org/en/)
 * [git](https://www.robinwieruch.de/git-essential-commands/)
 
-## Installation
+## Instalación
 
-* `git clone git@github.com:rwieruch/node-express-server-rest-api.git`
-* `cd node-express-server-rest-api`
+* `git clone git@github.com:crisvtex/giftcard-provider-protocol-node-express-api.git`
+* `cd giftcard-provider-protocol-node-express-api`
 * `npm install`
 * `npm start`
-* optional: include *.env* in your *.gitignore*
+* opcional: incluir *.env* en *.gitignore*
 
-### GET Routes
+### Rutas GET
 
-* visit http://localhost:3000
   * /giftcards
-  * /giftcards/1
-  * /users
-  * /users/1
+  * /giftcards/{giftcardId}
 
-### Beyond GET Routes
+### Rutas POST
 
-#### CURL
-
-* Create a giftcard with:
-  * `curl -X POST -H "Content-Type:application/json" http://localhost:3000/giftcards -d '{"text":"Hi again, World"}'`
-* Delete a giftcard with:
-  * `curl -X DELETE -H "Content-Type:application/json" http://localhost:3000/giftcards/1`
+* /giftcards/_search
+* /giftcards/{giftcardId}/transactions
 
 #### Postman
 
-* Install [Postman](https://www.getpostman.com/apps) to interact with REST API
-* Create a giftcard with:
-  * URL: http://localhost:3000/giftcards
-  * Method: POST
-  * Body: raw + JSON (application/json)
-  * Body Content: `{ "text": "Hi again, World" }`
-* Delete a giftcard with:
-  * URL: http://localhost:3000/giftcards/1
-  * Method: DELETE
+* Instalar [Postman](https://www.getpostman.com/apps) para interactuar con la API REST
