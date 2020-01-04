@@ -5,5 +5,5 @@ import giftcard from './giftcard';
 export default {
   session,
   user,
-  giftcard,
+  giftcard
 };
