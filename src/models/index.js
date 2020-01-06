@@ -32,7 +32,7 @@ let giftcards = [
 
 let transactions = [
   {
-    "cardId": "20",
+    "cardId": "giftcard1bono",
     "id": "123456",
     "_self": {
       "href": "/giftcards/20/transactions/123456"
