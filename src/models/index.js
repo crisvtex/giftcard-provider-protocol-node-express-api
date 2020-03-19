@@ -20,7 +20,7 @@ let giftcards = [
     clientId: 1
   },
   {
-    id: "giftcard2navidad",
+    id: "giftcard2covid",
     provider: "ohgiftcard",
     balance: 30000,
     _self: {
