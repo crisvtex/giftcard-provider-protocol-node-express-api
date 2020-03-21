@@ -29,9 +29,10 @@ app.use((req, res, next) => {
 app.use('/session', routes.session);
 app.use('/users', routes.user);
 app.use('/giftcards', routes.giftcard);
+app.use('/getblockedwindows', routes.getBlockedWindows)
 
 // Start
 
 app.listen(process.env.PORT, () =>
-  console.log(`Servicio API Backend iniciado en puerto ${process.env.PORT}`),
+  console.log(`Servicio API Backend iniciado en puerto http://localhost:${process.env.PORT}`),
 );
