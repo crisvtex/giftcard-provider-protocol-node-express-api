@@ -24,12 +24,24 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use(function(req, res, next){
+  if (req.is('text/*')) {
+    req.text = '';
+    req.setEncoding('utf8');
+    req.on('data', function(chunk){ req.text += chunk });
+    req.on('end', next);
+  } else {
+    next();
+  }
+});
+
 // Routes
 
 app.use('/session', routes.session);
 app.use('/users', routes.user);
 app.use('/giftcards', routes.giftcard);
 app.use('/getblockedwindows', routes.getBlockedWindows)
+app.use('/addBlockedWindows', routes.addBlockedWindows)
 
 // Start
 
