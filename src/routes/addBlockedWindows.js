@@ -49,10 +49,10 @@ router.post('/:carrierId', async (req, res) => {
     const requestOptionsGetBlockedWindows = {
         method: 'POST',
         headers,
-        body: req.query.windowToBlock
+        body: `"${req.query.windowToBlock}"`
     };
 
-    const endpointUrl = `https://logistics.vtexcommercestable.com.br/api/logistics/pvt/configuration/carriers/${carrierId}/adddayofweekblocked?an=${accountName}`
+    const endpointUrl = `https://logistics.vtexcommercestable.com.br/api/logistics/pvt/configuration/carriers/4/adddayofweekblocked?an=vtexchileqa`
 
     console.log('Endpoint URL', endpointUrl)
     console.log('data', requestOptionsGetBlockedWindows)
