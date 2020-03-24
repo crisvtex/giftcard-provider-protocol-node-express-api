@@ -32,7 +32,6 @@ router.get('/', (req, res) => {
 
 
 /*  API Endpoint: POST Add BlockedWindow to carriedId */
-/* MIRAR https://www.kevinleary.net/syntax-error-unexpected-token-json-position-0/ explica por qué el POST tira error del body JSON con un string (PP XP puede ayudar a entender como hacer bien el request) */
 router.post('/:carrierId', async (req, res) => {
     
     const carrierId = req.params.carrierId;
@@ -52,7 +51,7 @@ router.post('/:carrierId', async (req, res) => {
         body: `"${req.query.windowToBlock}"`
     };
 
-    const endpointUrl = `https://logistics.vtexcommercestable.com.br/api/logistics/pvt/configuration/carriers/4/adddayofweekblocked?an=vtexchileqa`
+    const endpointUrl = `https://logistics.vtexcommercestable.com.br/api/logistics/pvt/configuration/carriers/${carrierId}/adddayofweekblocked?an=${accountName}`
 
     console.log('Endpoint URL', endpointUrl)
     console.log('data', requestOptionsGetBlockedWindows)
