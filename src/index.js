@@ -43,6 +43,7 @@ app.use('/users', routes.user);
 app.use('/giftcards', routes.giftcard);
 app.use('/getblockedwindows', routes.getBlockedWindows)
 app.use('/addBlockedWindows', routes.addBlockedWindows)
+app.use('/getCarrierById', routes.getCarrierById)
 
 // Start
 
